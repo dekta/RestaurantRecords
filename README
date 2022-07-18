@@ -1,0 +1,12 @@
+# Restaurant Inventory Tracker
+## user login informations
+#user name : 'ekta'
+#password : 'ekta4321'
+
+# Get started 
+''' bash
+ python manage.py runserver
+ '''
+
+ #Navigate to this url 
+ #(http://localhost:8000/)

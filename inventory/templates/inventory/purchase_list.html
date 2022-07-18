@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block head %}
+{% endblock %}
+{% block content %}
+    <h2>Purchases</h2>
+    <a href="{% url 'add_purchase' %}">Record New Purchase</a>
+    <hr/>
+    <table class="inventory-table">
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>Price</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for purchase in object_list %}
+            <tr>
+                <td>{{ purchase.menu_item.title }}</td>
+                <td class="price">₹{{ purchase.menu_item.price|stringformat:".2f" }}</td>
+                <td>{{ purchase.timestamp }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
